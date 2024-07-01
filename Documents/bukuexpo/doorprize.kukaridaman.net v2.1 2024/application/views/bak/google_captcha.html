@@ -1,0 +1,32 @@
+define('SITE_KEY', '6LeXAZIUAAAAAMC_zfUBWij74OUSjEi8Q3rdJFhl');
+define('SECRET_KEY', '6LeXAZIUAAAAAJIATj6gPmm5BoIK0XrE2JYqTCl4');
+   
+    <script src="https://www.google.com/recaptcha/api.js?render=6LeXAZIUAAAAAMC_zfUBWij74OUSjEi8Q3rdJFhl"></script>
+   <script>
+        grecaptcha.ready(function() {
+            grecaptcha.execute('6LeXAZIUAAAAAMC_zfUBWij74OUSjEi8Q3rdJFhl', {
+                action: 'page/cek_daftar'
+            }).then(function(token) {
+                $('#LoginForm').prepend('<input type="hidden" name="token" value="' + token + '">');
+
+            });;
+        });
+    </script>
+
+
+<script>
+    $('#DaftarForm').submit(function(event) {
+        event.preventDefault();
+        var txtnama = $('#txtnama').val();
+
+        grecaptcha.ready(function() {
+            grecaptcha.execute('6LeXAZIUAAAAAMC_zfUBWij74OUSjEi8Q3rdJFhl', {
+                action: 'cek_daftar'
+            }).then(function(token) {
+                $('#LoginForm').prepend('<input type="hidden" name="token" value="' + token + '">');
+                $('#LoginForm').prepend('<input type="hidden" name="action" value="cek_login_user">');
+                $('#LoginForm').unbind('submit').submit();
+            });;
+        });
+    });
+</script>

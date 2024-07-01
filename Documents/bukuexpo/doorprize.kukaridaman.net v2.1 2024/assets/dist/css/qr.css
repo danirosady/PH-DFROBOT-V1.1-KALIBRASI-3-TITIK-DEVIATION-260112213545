@@ -1,0 +1,203 @@
+body {
+    background-image: url("http://doorprize.kukaridaman.net/assets/dist/img/bukapuasa2024_pincel_app_desktop_md.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top;
+    background-size: cover;
+    background-color: #dddddd;
+}
+
+@media screen and (max-width: 480px) {
+body {
+    background-image: url("http://doorprize.kukaridaman.net/assets/dist/img/bukapuasa2024_pincel_app_mobile_md.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top;
+    background-size: cover;
+    background-color: #dddddd;
+            }
+} 
+    h1 {
+    font-size: 1rem;
+}
+
+@media (min-width: 360px) {
+    h1 {
+        font-size: 1.3rem;
+    }
+    #md, #lg {
+    display: none;
+    }       
+}
+
+@media (min-width: 600px) {
+    h1 {
+        font-size: 1.6rem;
+    }    
+    #sm, #lg {
+    display: none;
+    }
+    #md {
+    display: block;
+    }
+    
+}
+
+@media (min-width: 800px) {
+    h1 {
+        font-size: 1.9rem;
+    }
+    #sm, #lg {
+    display: none;
+    }
+    #md {
+    display: block;
+    }
+ 
+}
+
+@media (min-width: 1000px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+    #sm, #lg {
+    display: none;
+    }
+    #md {
+    display: block;
+    }
+}
+
+@media (min-width: 1240px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+    #sm, #md {
+    display: none;
+    }
+    #lg {
+    display: block;
+    }
+}
+
+.card {
+    margin-right: auto;
+    margin-left: auto;
+
+    box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+
+    border-radius: 5px;
+    backdrop-filter: blur(14px);
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    text-align: center;
+}
+
+#sampleImage {
+    -webkit-animation: sharp 5s;
+    /* Chrome, Safari, Opera */
+    animation: sharp 5s;
+    backdrop-filter: blur(14px);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+@-webkit-keyframes sharp {
+    from {
+        -webkit-filter: blur(5px);
+        -moz-filter: blur(5px);
+        -o-filter: blur(5px);
+        -ms-filter: blur(5px);
+        filter: blur(5px);
+    }
+
+    to {
+        -webkit-filter: none;
+        -moz-filter: none;
+        -o-filter: none;
+        -ms-filter: none;
+        filter: none;
+    }
+}
+
+@keyframes sharp {
+    from {
+        -webkit-filter: blur(5px);
+        -moz-filter: blur(5px);
+        -o-filter: blur(5px);
+        -ms-filter: blur(5px);
+        filter: blur(5px);
+    }
+
+    to {
+        -webkit-filter: none;
+        -moz-filter: none;
+        -o-filter: none;
+        -ms-filter: none;
+        filter: none;
+    }
+}
+
+.rating {
+    border: none;
+    float: left;
+}
+
+.rating>input {
+    display: none;
+}
+
+.rating>label::before {
+    margin: 5px;
+    font-size: 1.25em;
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f005";
+}
+
+.rating>label {
+    color: #ddd;
+    float: right;
+}
+
+.rating>input:checked~label,
+.rating:not(:checked)>label:hover,
+.rating:not(:checked)>label:hover~label {
+    color: #f7d106;
+}
+
+.rating>input:checked+label:hover,
+.rating>input:checked~label:hover,
+.rating>label:hover~input:checked~label,
+.rating>input:checked~label:hover~label {
+    color: #fce873;
+}
+
+h4 {
+    font-weight: normal;
+    margin-top: 40px;
+    margin-bottom: 0px;
+}
+
+
+
+#hasil {
+    font-size: 20px;
+}
+
+#star {
+    float: left;
+    padding-right: 20px;
+}
+
+#star span {
+    padding: 3px;
+    font-size: 20px;
+}
+
+.on {
+    color: #f7d106
+}
+
+.off {
+    color: #ddd;
+}
